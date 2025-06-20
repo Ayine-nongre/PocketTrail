@@ -141,13 +141,13 @@ export default function Setting() {
                 <Text style={{ fontSize: 12, color: lighttheme.MUTED_FOREGROUND, fontFamily: 'Inter_400Regular' }}>Get help and learn more about the app</Text>
             </View>
             
-            <View style={{ padding: 10, borderWidth: 1, borderRadius: 8, borderColor: lighttheme.BORDER, marginTop: 20, justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
+            <TouchableOpacity onPress={() => router.push('/help-center')} style={{ padding: 10, borderWidth: 1, borderRadius: 8, borderColor: lighttheme.BORDER, marginTop: 20, justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
                 <Feather name="help-circle" size={22} color="black" />
                 <Text style={{ fontSize: 14, fontFamily: 'Inter_400Regular' }}>Help Center</Text>
               </View>
               <Ionicons name="chevron-forward" size={22} color="black" />
-            </View>
+            </TouchableOpacity>
           </View>
 
           <View style={{ paddingHorizontal: 16, paddingVertical: 12, borderWidth: 1, borderRadius: 8, borderColor: lighttheme.BORDER, marginTop: 20, backgroundColor: lighttheme.DESTRUCTIVE, justifyContent: 'center', alignItems: 'center', flexDirection: 'row', gap: 10 }}>

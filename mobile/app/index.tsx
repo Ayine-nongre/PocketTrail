@@ -39,7 +39,7 @@ export default function Index() {
     if (currentStep < onboardingSteps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      router.push('/(tabs)/dashboard');
+      router.push('/(auth)/login');
     }
   }
 
