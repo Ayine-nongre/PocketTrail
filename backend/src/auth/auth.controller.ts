@@ -45,8 +45,9 @@ export class AuthController {
     @ApiBody({ type: LoginDto })
     @ApiResponse({ status: 201, description: 'User logged in successfully', type: SignUpResponseDto })
     @ApiResponse({ status: 400, description: 'Validation failed' })
-    async login(data: LoginDto): Promise<SignUpResponseDto> {
+    async login(@Body() data: LoginDto): Promise<SignUpResponseDto> {
        try{
+        console.log(data)
             const { returnedUser, accessToken, refreshToken } = await this.authService.login(data)
             
             return {
