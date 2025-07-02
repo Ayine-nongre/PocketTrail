@@ -40,10 +40,11 @@ export class AuthController {
 
     @Public()
     @Post('login')
+    @HttpCode(HttpStatus.OK)
     @UsePipes(new ValidationPipe({ transform: true }))
     @ApiOperation({ summary: "Endpoint to log a user in"})
     @ApiBody({ type: LoginDto })
-    @ApiResponse({ status: 201, description: 'User logged in successfully', type: SignUpResponseDto })
+    @ApiResponse({ status: 200, description: 'User logged in successfully', type: SignUpResponseDto })
     @ApiResponse({ status: 400, description: 'Validation failed' })
     async login(@Body() data: LoginDto): Promise<SignUpResponseDto> {
        try{
